@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/formulario.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <title>salones</title>
+</head>
+<body>
+  <h1>Agregar Recurso</h1>
+  <p>Ingrese todos los datos por favor</p>
+  <form action="http://localhost:3000/recurso" method="post">
+    <div>
+      <p>A que salon pertenece</p>
+      <input type="text" name="NS2" id="NS2">
+    </div>
+    <div>
+      <p>Nombre del recurso</p>
+      <input type="text" name="NR" id="NR">
+    </div>
+    <div>
+        <p>Color</p>
+        <input type="text" name="CR" id="CR">
+    </div>
+    <div>
+        <p>Marca</p>
+        <input type="text" name="MR" id="MR">
+    </div>
+    <div>
+        <p>Estado</p>
+        <input type="text" name="ER" id="ER">
+    </div>
+    <div>
+        <p>Precio</p>
+        <input type="number" name="PR" id="PR">
+    </div>
+    <div>
+        <p>Serial</p>
+        <input type="text" name="SR" id="SR">
+    </div>
+    <div>
+        <p>Posicion</p>
+        <input type="number" name="POR" id="POR">
+    </div>
+    <input type="submit" value="Enviar">
+  </form>
+  <script src="/Js/principal.js"></script>
+</body>
+</html>

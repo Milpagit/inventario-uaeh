@@ -1,0 +1,88 @@
+:root{
+    --color-fondo:radial-gradient(circle at 50% 120.71%, #ffffff 0, #ffffff 10%, #ffffff 20%, #ffffff 30%, #ffffff 40%, #ffffff 50%, #fcf4f7 60%, #f9ebf1 70%, #f4e2ec 80%, #efdae9 90%, #ead4e7 100%);
+    --color-texto:rgb(0,0,0);
+    --color-marco:rgba(0, 0, 0, 0.3);
+    --color-texto-bt:rgb(234,212,231);
+}
+ .dark-mode{
+    --color-fondo:radial-gradient(circle at 50% 120.71%, #3f5b8c 0, #1b263b 50%, #000000 100%);
+    --color-texto:rgb(255,255,255);
+    --color-marco:rgba(255, 255, 255,.3);
+    --color-texto-bt:rgb(51,73,112);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: IBM Plex Sans, Tahoma, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: var(--color-fondo);
+    background-size:cover ;
+    background-position: center;
+}
+.Formulario{
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid var(--color-marco);
+    backdrop-filter: blur(20px);
+    box-shadow: 0,0 10px rgba(0, 0, 0, .2);
+    color: azure;
+    padding: 40px 20px;
+    border-radius: 40px;
+}
+.Formulario{
+    text-align: center;
+    font-size: 26px;
+}
+.Usuario,.Contraseña{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    position: relative;
+}
+.Formulario h1{
+    font-size: 30px;
+    text-align: center;
+    color: var(--color-texto);
+}
+input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: var(--color-texto);
+    border: 2px solid var(--color-marco);
+    
+}
+input::placeholder{
+    color: var(--color-texto);
+}.Usuario i ,.Contraseña i {
+position: absolute;
+right: 20px;
+top: 50%;
+transform: translateY(-50%);
+font-size: 20px;
+color: var(--color-texto);
+
+}
+.Formulario button{
+    width: 100%;
+    height: 45px;
+    background-color: var(--color-texto);
+    border: none;
+    outline: none;
+    border-radius: 45px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    color: var(--color-texto-bt);
+    font-weight: 600;
+
+}

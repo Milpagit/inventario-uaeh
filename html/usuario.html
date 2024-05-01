@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/formulario.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <title>salones</title>
+</head>
+<body>
+  <h1>Agregar usuario</h1>
+  <p>Ingrese todos los datos por favor</p>
+  <form action="http://localhost:3000/usuario" method="post">
+    <div>
+      <p>Nombre completo</p>
+      <input type="text" name="NOMC" id="NOMC">
+    </div>
+    <div>
+      <p>Nivel de usuario</p>
+      <input type="text" name="NUSU" id="NUSU">
+    </div>
+    <div>
+        <p>contraseña</p>
+        <input type="text" name="CUSU" id="CUSU">
+    </div>
+    <div>
+        <p>matricula</p>
+        <input type="text" name="MUSU" id="MUSU">
+    </div>
+    <input type="submit" value="Enviar">
+  </form>
+  <script src="/Js/principal.js"></script>
+</body>
+</html>

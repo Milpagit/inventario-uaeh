@@ -1,0 +1,90 @@
+:root{
+    --color-barra-lateral:rgb(222, 226, 230);
+    --color-texto:rgb(0,0,0);
+    --color-texto-menu:rgb(134,136,144);
+    --color-boton:rgb(0,0,0);
+    --color-texto-boton:rgb(255,255,255);
+    --color-menu-hover:rgb(238,238,238);
+    --color-menu-hover-texto:rgb(0,0,0);
+    --color-Linea:rgb(241,241,241);
+    --color-palanca-base:rgb(201,202,206);
+    --color-palanca-circulo:rgb(241,241,241);
+    --color-fondo:rgb(248, 249, 250);
+    --color-fondo-flotante:rgb(233,236,239);
+.dark-mode{
+    --color-barra-lateral:rgb(13,27,42);
+    --color-texto:rgb(255,255,255);
+    --color-texto-menu:rgb(110,110,117);
+    --color-boton:rgb(255,255,255);
+    --color-texto-boton:rgb(0,0,0);
+    --color-menu-hover:rgb(0,0,0);
+    --color-menu-hover-texto:rgb(238,238,238);
+    --color-Linea:rgb(71,70,78);
+    --color-palanca-base:rgb(39,205,64);
+    --color-palanca-circulo:rgb(255,255,255);
+    --color-fondo:rgb(27,38,59);
+    --color-fondo-flotante:rgb(37,48,69);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: IBM Plex Sans, Tahoma, sans-serif;
+}
+body{
+  height: 100vh;
+  width: 100%;
+  background-color: var(--color-fondo);
+  transition: background-color 0.3s ease ;
+}
+  
+  /* Estilo del elemento h1 para el título */
+  h1 {
+    text-align: center;
+    font-size: 2.5rem; /* Ajustar el tamaño de fuente según sea necesario */
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: var(--color-barra-lateral); /* Fondo gris claro para el título */
+    border-radius: 5px;
+    color: var(--color-texto);
+  }
+  
+  /*  formulario y sus elementos */
+  form {
+    display: flex; /* Organizar los elementos del formulario en una fila */
+    flex-direction: column; /* Apilar elementos verticalmente */
+    width: 50%; /* Ajustar el ancho del formulario según sea necesario */
+    margin: 0 auto; /* Centrar el formulario horizontalmente */
+    padding: 20px;
+    background-color: var(--color-fondo-flotante); 
+    border-radius: 5px;
+    box-shadow: 10px black;
+  }
+  body p{
+    text-align: center;
+    color: var(--color-texto);
+  }
+  form p {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--color-texto);
+  }
+  
+  form input {
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    width: 100%; 
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: var(--color-boton); 
+    color: var(--color-texto-boton); 
+    border-radius: 5px;
+    cursor: pointer;  
+    
+  }
+  

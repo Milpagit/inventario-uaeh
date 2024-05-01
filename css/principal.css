@@ -1,0 +1,239 @@
+:root{
+    --color-barra-lateral:rgb(222, 226, 230);
+    --color-texto:rgb(0,0,0);
+    --color-texto-menu:rgb(134,136,144);
+    --color-boton:rgb(0,0,0);
+    --color-texto-boton:rgb(255,255,255);
+    --color-menu-hover:rgb(238,238,238);
+    --color-menu-hover-texto:rgb(0,0,0);
+    --color-Linea:rgb(241,241,241);
+    --color-palanca-base:rgb(201,202,206);
+    --color-palanca-circulo:rgb(241,241,241);
+    --color-fondo:rgb(248, 249, 250);
+    --color-fondo-flotante:rgb(233,236,239);
+}
+ .dark-mode{
+    --color-barra-lateral:rgb(13,27,42);
+    --color-texto:rgb(255,255,255);
+    --color-texto-menu:rgb(110,110,117);
+    --color-boton:rgb(255,255,255);
+    --color-texto-boton:rgb(0,0,0);
+    --color-menu-hover:rgb(0,0,0);
+    --color-menu-hover-texto:rgb(238,238,238);
+    --color-Linea:rgb(71,70,78);
+    --color-palanca-base:rgb(39,205,64);
+    --color-palanca-circulo:rgb(255,255,255);
+    --color-fondo:rgb(27,38,59);
+    --color-fondo-flotante:rgb(37,48,69);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: IBM Plex Sans, Tahoma, sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color-fondo);
+    transition: background-color 0.3s ease ;
+}
+.Barralateral span{
+    font-size: 20px;
+    width: 100px;
+    font-size: 18px;
+    opacity: 1;
+    transition: opacity 0.5s ease, width 0.5s ease;
+    text-align: left;
+}
+
+.Barralateral span.oculto{
+    opacity: 0;
+    width: 0;
+
+}
+.Barralateral{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    overflow: hidden;;
+    padding: 20px 15px;
+    background-color: var(--color-barra-lateral);
+    transition: width 0.5s ease, background-color 0.3s ease;
+}
+.Barralateral .InventarioU{
+    height: 100%;
+    height: 45px;
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+}
+.Barralateral .InventarioU i{
+    min-width: 60px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+
+.minibarra{
+    width: 80px;
+}
+/*Diseño del boton */
+.Barralateral .boton{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-boton);
+    color: var(--color-texto-boton);
+    color: var(--color-barra-lateral);
+
+}
+
+#Iconboton{
+    min-width: 50px;
+    font-size: 25px;
+}
+.Barralateral .InventarioU span{
+    margin-left: 5px;
+    font-size: 25opx;
+}
+
+.Barralateral .navegacion li{
+    list-style: none;
+    display: flex;
+    margin-bottom: 5px;
+}
+.Barralateral .navegacion a{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color: var(--color-texto-menu);
+}
+.Barralateral .navegacion a:hover{
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-texto);
+}
+.Barralateral .navegacion i{
+    border: 2px;
+    min-width: 50px;
+    font-size: 20px;
+}
+.Linea{
+    width: 100% ;
+    height: 2px ;
+    background-color:var(--color-Linea);
+}
+.Barralateral .modo-oscuro{
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.Barralateral .modo-oscuro .info{
+    width: 15px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    color: var(--color-texto-menu); 
+}
+.Barralateral .modo-oscuro i{
+    width: 50px;
+    font-size: 20px;
+}
+.Barralateral .modo-oscuro .switch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 45px;
+    cursor: pointer;
+}
+.Barralateral .modo-oscuro .switch .base{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 35px;
+    height: 20px;
+    background-color: var(--color-palanca-base);
+    border-radius: 50px;
+}
+.Barralateral .modo-oscuro .circulo{
+    width: 18px;
+    height: 90%;
+    background-color: var(--color-palanca-circulo);
+    border-radius: 50%;
+    position: absolute;
+    left: 2px; 
+    transition: left 0.5s ease;
+}
+.Barralateral .modo-oscuro .circulo.prendido{
+  left: 15px ;  
+}
+
+main{
+    margin-left: 250px;
+    padding: 20px;
+    color: var(--color-texto);
+    transition: margin-left 0.5s ease ;
+}
+main.min-main{
+    margin-left: 80px;
+}
+
+.modal {
+    background-color: var(--color-fondo-flotante);
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+
+  } 
+  .modal::backdrop{
+    background-color: rgba(0,0,0,.55);
+  }
+.modal button{
+    background-color: var(--color-boton);
+    color: var(--color-texto-boton);
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 15px 20px;
+    width: 200px;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.modal a{
+    color: var(--color-texto-boton);
+    text-decoration: none;
+    font-size: 15q0px;
+}
+.moda i{
+    font-size: 15px;
+}
+
+.modal {
+    transition: opacity 1s ease;
+  }
+  .modal.open {
+    opacity: 1;
+  }
+
+  table.tablaArticulos {
+    background-color:#7952b3;
+    color:aliceblue;
+}

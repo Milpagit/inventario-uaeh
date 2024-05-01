@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/formulario.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <title>Movimientos</title>
+</head>
+<body>
+  <h1>Agregar Movimiento</h1>
+  <p>Ingrese todos los datos por favor</p>
+  <form action="http://localhost:3000/movimiento" method="post">
+    <div>
+      <p>serial</p>
+      <input type="number" name="SE" id="SE">
+    </div>
+    <div>
+      <p>Matricula del responsable</p>
+      <input type="number" name="SE" id="SE">
+    </div>
+    <div>
+      <p>Nombre del Salon</p>
+      <input type="text" name="MAT" id="MAT">
+    </div>
+    <div>
+      <p>Tipo de movimiento</p>
+      <input type="text" name="NS" id="NS">
+    </div>
+    <div>
+      <p>Fecha del movimiento</p>
+      <input type="date" name="FMOV" id="FMOV">
+    </div>
+    <div>
+    <p>Hora</p>
+      <input type="time" name="HOMOV" id="HOMOV">
+    </div>
+    <div>
+      <p>Obeservaciones</p>
+        <input type="text" name="OBMOV" id="OBMOV">
+      </div>
+    <input type="submit" value="Enviar">
+  </form>
+  <script src="/Js/principal.js"></script>
+</body>
+</html>
