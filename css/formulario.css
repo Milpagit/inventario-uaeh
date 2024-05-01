@@ -11,6 +11,7 @@
     --color-palanca-circulo:rgb(241,241,241);
     --color-fondo:rgb(248, 249, 250);
     --color-fondo-flotante:rgb(233,236,239);
+    }
 .dark-mode{
     --color-barra-lateral:rgb(13,27,42);
     --color-texto:rgb(255,255,255);
@@ -87,4 +88,5 @@ body{
     cursor: pointer;  
     
   }
+
   
