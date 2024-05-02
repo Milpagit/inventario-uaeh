@@ -1,0 +1,107 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.izquierda, .derecha{
+    height: 100vh; /* se utiliza para que habarque toda la pagina viewport height*/
+    width: 100%;
+}
+
+.izquierda{
+   background: #274C78;
+    border-radius: 0 25px 25px 0;
+}
+
+.derecha{
+    /*background: #f6f5f7;*/
+    background-image: url(../imagenes/fondo.jpg);
+    display: grid;
+    place-content: center;
+}
+
+
+h1{
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+}
+
+p{
+    font-size: 30px;
+    text-align: center;
+}
+
+.boton{
+    width: 100%; /*tamño*/
+    padding: 18px 0;
+    margin: 25px 0;
+    font-size: 23px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: #4CC9F0;
+    border: none; /*sin bordes*/
+    border-radius: 5px; /*redondeado del borde*/
+    transition: 1s all; /*transición de color en 1 segundo, para todas las propiedades*/
+    cursor: pointer; /*cambia el mouse por una manita*/
+}
+
+.boton:hover{ /*evento con el mouse*/
+    background:#3a86ff; /*cuando pase el mouse se va a cambiar de color*/
+    transform: scale(1.1); /*se hace una trasformación de escala al 20%*/
+    /*transform: rotate(70deg); rotación deg-grados*/
+}
+
+.boton a{
+    text-decoration: none;
+    color: #FFFFFF;
+    display: block;
+}
+
+form{
+    width: 400px;
+    margin: 15px 20px;
+    padding: 10px 30px;
+    border: 2px solid #000000; /*forma corta (el tamño importa) tamño, tipo, color*/
+    border-radius: 10px; 
+}
+
+form label, form legend{ 
+    display: block;
+    font-size: 15px;
+    margin: 0 0 5px; /*arriba derecha abajo*/
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 5px;
+    padding: 10px 25px; 
+    width: 100%;
+    background:#DEE2E6 ;
+    border: none;
+    border-radius: 5px;
+}
+
+select{
+    display: block;
+    margin: 0 0 5px;
+    padding: 10px 25px; 
+    width: 100%;
+    background:#DEE2E6 ;
+    border: none;
+    border-radius: 5px;
+}
+
+.boton#crear{
+    width: 70%;
+    padding: 18px 0;
+    margin: 20px 15% 10px;
+    font-size: 18px;
+}
+
+.boton#iniciar{
+    width: 70%;
+    padding: 18px 0;
+    margin: 20px 15% 10px;
+    font-size: 18px;
+}

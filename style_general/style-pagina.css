@@ -1,0 +1,465 @@
+html{
+    height: 100%; /*altura*/
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background: #f6f5f7
+}
+
+header{
+    background-color: #274C78;
+    height: 100px;
+    padding: 20px 0; /*espaciamiento externo: superior e invferior= 20px laterales=0 */
+}
+
+.navegacion{ /*caja de navegación*/
+    width: 940px;
+    position: relative;
+    margin: 0 auto;  /*automatico (calcula en función al tamaño del navegador de iz a dere, lo deja en medio )*/
+}
+
+nav{ /*panel de navegación*/
+    position: absolute;
+    top: 45px;
+    right: 0;
+    margin-right: -150px;
+}
+
+nav li{ /* panel de navegacion, listas*/
+    display: inline; 
+    margin:  0 0 0 25px;
+}
+
+nav a{ /*panel de navegación en los hiprvinculos */
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 20px; 
+    text-decoration: none; 
+}
+
+nav a:hover{ /*evento al pasar el mouse*/
+    color: #0096C7;
+}
+
+main{ /*cuerpo de la pagina*/
+    width: 80%;
+    margin: 0 auto;
+}
+
+.titulos{
+    display: flex;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.bienvenida{
+    margin-bottom: 3%;
+}
+
+.titulos h1{
+    font-weight: bold;
+    font-size: 60px;
+    margin-left: 2%;
+
+}
+
+.subtitulos{
+    font-weight: bold;
+    font-size: 45px;
+    display: inline-block;
+}
+
+.botonIcono{ /*estilo para los iconos*/
+    border: none;
+    outline: none;
+    background: none;
+    margin-left: 20px;
+    transition: 1s all; 
+    cursor: pointer;
+}
+
+.botonIcono:hover{ /*evento al pasar el mouse*/
+    transform: scale(1.2);
+}
+
+.atras{
+    height: auto;
+    max-width: 50px;
+}
+
+.form-container{ /*lo que esta abajo de la ventana modal (al abrir el icono)*/
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    align-items: center; /*se alinean verticalmente, de flex-box*/
+    justify-content: center; /*de flex-box alinar horizontalemente*/
+    position: fixed;
+    pointer-events: none; /*no se puede hacer click en ningun lado*/
+    opacity:0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    z-index: 2; /*determina el orden de apilamiento de los elementos posicionados y los elementos flotantes.*/
+}
+
+.form-editar{ /*lo que esta abajo de la ventana modal de editar (al abrir el icono)*/
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    align-items: center; /*se alinean verticalmente, de flex-box*/
+    justify-content: center; /*de flex-box alinar horizontalemente*/
+    position: fixed;
+    pointer-events: none; /*no se puede hacer click en ningun lado*/
+    opacity:0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    z-index: 2; /*determina el orden de apilamiento de los elementos posicionados y los elementos flotantes.*/
+}
+
+.formularioVentana{ /*ventana modal*/
+    background: #f6f5f7;
+    width: 40%;
+    max-width: 100%;
+    padding: 30px 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: grid; /*contenedor que contiene todas las cajas*/
+}
+
+.formulario{
+    width: 100%;
+    display: grid; /*contenedor que contiene todas las cajas*/
+    grid-template-columns: 50% 50%; /*para que se modifique de acuerdo a como yo digo en los hijos*/
+}
+
+.caja{ /*cajas del display*/   
+    /*float: left; uno del lado de otro*/
+    text-align: justify;
+}
+
+.tituloFormulario{
+    grid-column: 1/2; /*que vaya de la priera lina hasta la 3*/
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 3%;
+    font-size: 25px;
+    font-weight: bold;
+    background: #4ccaf0b3;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); /*sombreado*/
+}
+
+form label, form legend{ /*formato de los label*/
+    font-size: 18px;
+    margin: 15px;
+    margin-left: 10%;
+}
+
+select, .input, textarea{ /*formato de los inputs*/
+    display: block;
+    width: 85%;
+    margin: 5% 5%;
+    background:#DEE2E6 ;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 30px;
+    padding-inline-start: 20px;
+}
+
+textarea{
+    height: 100px;
+}
+
+.eliminarVentana{ /*ventana modal*/
+    background: #f6f5f7;
+    width: 30%;
+    max-width: 100%;
+    padding: 30px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.eliminarVentana p{
+    text-align: center;
+    color: #d90429;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.formEliminar{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.eliminar{
+    width: 10%;
+    background: #ef233c;
+    margin: 0 10px;
+}
+
+.eliminar:hover{
+    background:#d90429;
+    transform:scale(1.1);
+}
+
+
+
+.otraPlanta{
+    margin-top: 29px;
+    margin-bottom: 10px;
+}
+
+.otraPlanta p{
+    text-align: justify;
+    color: red;
+    display: none;
+}
+
+#numeroPiso{
+    display: none;
+}
+
+.boton{ /*estilo de boton general*/
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    /*background: #4CC9F0;*/
+    border: none; /*sin bordes*/
+    border-radius: 5px; /*redondeado del borde*/
+    transition: 1s all; /*transición de color en 1 segundo, para todas las propiedades*/
+    cursor: pointer; /*cambia el mouse por una manita*/
+}
+
+
+/*.boton:hover{ /*evento con el mouse*/
+    /*background:#3a86ff; /*cuando pase el mouse se va a cambiar de color*/
+    /*transform:scale(1.1); /*se hace una trasformación de escala al 20%*/
+    /*transform: rotate(70deg); rotación deg-grados*/
+/*}*/
+
+.botonAccion{
+    display: flex;
+    grid-column: 1/3; /*que vaya de la priera lina hasta la 3*/ 
+    justify-self: end; /*se pasa hasta el final*/
+    margin-right: 5%;
+    margin-top: 5px;
+}
+
+.agregar{
+    width: 150%; /*tamño*/
+    background-color: #4CC9F0;
+}
+
+.agregar:hover{
+    background:#3a86ff;
+    transform:scale(1.1);
+}
+
+.cancelar{
+    width: 150%; /*tamño*/
+    background: #ef233c;
+}
+
+.cancelar:hover{
+    background:#d90429;
+    transform:scale(1.1);
+}
+
+.accion{
+    margin: 0 30px;
+}
+
+.show{ /*va con js para que muestre la ventana modal*/
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.listaElemento{ /*estilo de cada punto de la lista*/
+    display: inline-block;
+    text-align: center;
+    width: 30%;/*de todo el tamño que ocupan las listas el 100% vamos a ocupar por cada item el 30%, se ocupará el 90% y el 10% que queda va a ser el espacio entre los items*/
+    vertical-align: top; /*la alineacion de los items va a ser vertical*/
+   /*background-color: #BBBBBB; ayuda a tener un visual mas claro*/
+    margin: 0 1.5%; /*margen externo (horizonatal laterales)*/
+    padding: 30px 20px; /*espaciamiento iterno (horizontal, vertical)*/
+    box-sizing: border-box; /*el borde de cada uno de los items, el 20% no va a salir de los 30%*/
+    border: 2px solid #000000; /*forma corta (el tamño importa) tamño, tipo, color*/
+    border-top-width: 10px;
+    border-radius: 10px;  
+    margin: 3% 1.5%;
+}
+
+.listaElemento:hover{
+    border-color: #2f5c93; /*cuando se mouse se mueve cambia de color el borde*/
+}
+
+.listaElemento h2{ /*estilo del titulo de las listas*/
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.listaElemento:hover h2{ /*cuando el mouse se posiscione en cualquier parte del emlemento li, se resaltara el tamaño del texto de h2*/
+    font-size: 35px;
+}
+
+.description{
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.contenedorListas{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 50px; /*espacio para separ el header, del item le vamos a dar un espacio en la parte superior*/
+    margin: 0 auto;
+}
+
+.contenedorListas.keep-visible{
+    display: block;
+}
+
+.accionLista{
+    padding-top: 7%;
+}
+
+.tablaBody{
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+
+.tabla{
+    width: 100%;
+}
+
+.tablaEncabezado{
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: #00a7fbb6;
+    border-radius: 5px;
+}
+
+.tablaEncabezado p{
+    padding-left: 50px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.buscar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    outline: none;
+    
+}
+
+.buscarPor{
+    background-color: #FFFFFF;
+}
+
+.inputBuscar{
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.tablaSection{
+    height: 750px;
+    overflow: auto;
+    position: relative;
+    z-index: 1; /*determina el orden de apilamiento de los elementos posicionados y los elementos flotantes.*/
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    min-width: 950px; /*ancho minimo*/
+    border-collapse: collapse;
+}
+
+thead th{
+    position: sticky;
+    top: 0;
+    background-color: #e9ecef;
+    color: #6c757d;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+th,td{
+    border-bottom: 1px solif #dddddd;
+    padding: 15px 25px;
+    word-break: break-all; /*las palabras se dividen para que quepan en un espacio*/
+    text-align: center;
+}
+
+td{
+    font-size: 18px;
+}
+
+tr:hover td{
+    color: #0298cf;
+    cursor: pointer;
+    background-color: #e6e6e9;
+}
+
+.contenedorAcciones{
+    display: flex;
+    justify-content: center;
+}
+
+.icono{
+    border-radius: 6px;
+    padding: 8px;
+    /*color: #FFFFFF;*/
+    margin-left: 10px;
+}
+
+.icono:nth-child(1){
+    background-color: #0298cf;
+}
+
+.icono:nth-child(2){
+    background-color: #f80000;
+}
+
+.paginacion{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+}
+
+
+footer{ 
+    margin-top: auto;
+    text-align: center; 
+    background: url(../imagenes/footer.jpg);
+    padding: 40px;
+}
+
+.Copyright{
+    color:#FFFFFF;
+    font-size: 13px;
+    margin: 20px;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Institutos</title>
+        <link rel="stylesheet" href="../style_general/reset.css"> <!--para no tener el estilo predeterminado de html-->
+        <link rel="stylesheet" href="../style_general/style-pagina.css"> <!--hoja de estilos-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> <!--tipo de letra-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <header>
+            <div class="navegacion">
+                <h1> <img src=""></h1> <!--logo-->
+                <nav> <!--panel de navegación-->
+                    <ul> <!--lista horizontal, para la navegación-->
+                        <li><a href="institutos.html">Institutos</a></li> <!-- <a> hace referencia que hay un vinculo-->
+                        <li><a href="">Usuarios</a></li>
+                        <li><a href="">Movimientos</a></li>
+                        <li><a href="">Contacto</a></li>
+                        <li><a href="">Salir</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="titulos bienvenida">
+                <h1 > ¡HOLA, !</h1> <!--poner el nombre del usuario-->
+            </div>
+            
+            <div> <!--titulo, subtitulo y formulario-->
+
+                <div class="tablaEncabezado">
+                    <div >
+                        <h1 class="subtitulos"> INSTITUTOS </h1>
+                        <button class="botonIcono" id="agregar">
+                            <img src="../imagenes/agregar.png" alt="Agregar institutos">
+                        </button>
+                    </div>
+                    
+                    <div class="buscar">
+                        <select id="buscarPor" class="buscarPor"> <!--lista para seleccionar-->
+                            <!--opciones-->
+                            <option>------</option>
+                            <option>Nombre</option>
+                            <option>Ubicación</option> 
+                        </select>
+                        <input class="inputBuscar" placeholder="Buscar"/>
+                        <button class="botonIcono">
+                            <img src="../imagenes/buscar.png" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-container" id="form_container"> <!--lo que esta abajo del modal-->
+                    <div class="formularioVentana"> <!--ventana modal (contenedor que contiene todas las cajas)-->
+                        <div class="tituloFormulario">
+                            <h1> Agregar instituto </h1>
+                        </div>
+
+                        <form class="formulario" > <!--formulario-->
+                            <div  class="caja nombre"> <!--padre caja, hijo nombre (se pueden llamar por separado)-->
+                                <label for="nombre">Nombre del instituto </label>
+                                <input type="text" id="nombreInstituto" class="input" placeholder="Agregue iniciales" required>
+                            </div>
+    
+                            <div  class="caja ubicacion"><!--la caja continene el label y el input-->
+                                <label for="ubicacion">Dirección</label>
+                                <input type="text" id="ubicacionInstituto" class="input" required>
+                            </div>   
+    
+                            <div class="caja botonAccion"> <!--contiene los botones-->
+                                <div class="accion">
+                                    <input type="button" value="Cancelar" class="boton cancelar" id="cancelar">
+                                </div>
+                                <div class="accion">
+                                    <input type="submit" value="Agregar" class="boton agregar" id="agregarBD">
+                                </div>  
+                            </div> 
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contenedor" class="contenedorListas"> </div> <!--aqui se agregan-->
+
+            <div class="form-container" id="eliminarVentana"> <!-- lo que esta atras de la ventana modal para eliminar-->
+                <div class="eliminarVentana"> <!--ventana modal de eliminar-->
+                    <p> ¿Deseas eliminar este instituto? </p>
+                    <div class="formEliminar">
+                        <input type="button" value="No" class="boton eliminar" id="eliminarNo">
+                        <input type="button" value="Si" class="boton eliminar" id="eliminarSi">
+                    </div>   
+                </div>
+            </div>
+
+            <div class="form-editar" id="form_editar"> <!--lo que esta abajo del modal-->
+                <div class="formularioVentana"> <!--ventana modal (contenedor que contiene todas las cjas)-->
+
+                    <div class="tituloFormulario">
+                        <h1> Editar instituto </h1>
+                    </div>
+
+                    <form class="formulario" > <!--formulario-->
+                        <div  class="caja nombre"> <!--padre caja, hijo nombre (se pueden llamar por separado)-->
+                            <label for="nombre">Nombre del instituto </label>
+                            <input type="text" id="nombreInstituto" class="input" placeholder="Agregue iniciales" required>
+                        </div>
+
+                        <div  class="caja ubicacion"><!--la caja continene el label y el input-->
+                            <label for="ubicacion">Dirección</label>
+                            <input type="text" id="ubicacionInstituto" class="input" required>
+                        </div>   
+
+                        <div class="caja botonAccion"> <!--contiene los botones-->
+                            <div class="accion">
+                                <input type="button" value="Cancelar" class="boton cancelar" id="cancelarEditar">
+                            </div>
+                            <div class="accion">
+                                <input type="submit" value="Aceptar" class="boton agregar" id="ediatrBD">
+                            </div>  
+                        </div> 
+                    </form>
+                </div>
+            </div>
+
+        </main>
+        
+        <footer> <!--Etiqueta de pie de página-->
+            <p class="Copyright"> &copy Copyright  2024 </p>
+            <p class="Copyright"> DERECHOS RESERVADOS </p>
+            <p class="Copyright"> LOS PANZONES :D</p>
+
+        </footer>
+
+        <script src="institutos_app.js"></script>
+    </body>
+</html>

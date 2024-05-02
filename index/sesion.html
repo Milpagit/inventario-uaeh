@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta</title>
+
+    <link rel="stylesheet" href="reset.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"> <!--botstrap para que se divida en dos-->
+
+    <link rel="stylesheet" href="style.css"> <!--hoja de estilos-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--tipo de letra-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="row no-gutters"> <!-- "row" para dividir en dos -->
+
+        <div class="col-md-6 no-gutters "> <!--para que sea responsivo (escribir tal cual)-->
+            <div class="izquierda"> 
+                
+            </div>
+        </div>
+
+        <div class="col-md-6 no-gutters">
+            <div class="derecha"> <!--todo se va a centrar-->
+                <h1>Iniciar sesión</h1>
+                 <main>
+                    <form>
+
+                        <label for="noCuenta"> No.cuenta</label> 
+                        <input type="text" id="noCuenta" class="input-padron" required >
+
+                        <label for="contraseña">Contraseña</label> 
+                        <input type="password" id="contraseña" class="input-padron" required placeholder="********">
+
+                        <input type="submit" value="Iniciar" id="iniciar" class="boton">
+
+                    </form>
+                 </main>
+                
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
