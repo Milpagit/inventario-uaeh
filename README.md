@@ -1,1 +1,1 @@
-##Inventario para la uaeh
+*Inventario para la uaeh
