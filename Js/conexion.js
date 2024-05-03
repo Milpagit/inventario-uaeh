@@ -36,7 +36,7 @@ app.post('/login', (req, res) => {
       res.status(500).send('Error en la consulta de la base de datos');
     } else {
       if (results.length > 0) {
-        res.redirect('http://127.0.0.1:5500/html/principal.html');
+        res.redirect('http://127.0.0.1:5500/inventario-uaeh/html/principal.html');
       } else {
         res.send('Credenciales incorrectas');
       }
