@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const cors = require('cors'); // Importar el paquete CORS
-s
 
 const app = express();
 const port = 3000; // Define your preferred port
@@ -24,8 +23,7 @@ const connection = mysql.createConnection({
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------
 app.post('/login', (req, res) => {
-  const matricula = req.body.ma
-  tricula;
+  const matricula = req.body.matricula;
   const password = req.body.password;
   
 
