@@ -32,14 +32,14 @@ function agregarInstituto(nombre,ubicacion) { //agrega un nuevo instituto al htm
     divInstituto.classList.add("listaElemento", "description"); //se le agregan los estilos
     divInstituto.innerHTML = `
         <h2>${nombre}</h2>
-        <img src="../imagenes/instituto.png">
+        <img src="/inventario-uaeh/Image/instituto.png">
         <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ea tenetur debitis excepturi doloribus! Distinctio iusto officiis aliquid beatae earum veritatis quibusdam debitis ex, quas sed recusandae eveniet? Eaque, sed!e</p>
         <div class="accionLista">
             <button class="botonIcono icono" id="editarIcono">
-                <img src="../imagenes/editar.png" alt="Boton para editar el contenido de la tabla">
+                <img src="/inventario-uaeh/Image/editar.png" alt="Boton para editar el contenido de la tabla">
             </button>
             <button class="botonIcono icono" id="borrarIcono">    
-                <img src="../imagenes/borrar.png" alt="Boton para borrar el contenido de la tabla">
+                <img src="/inventario-uaeh/Image/borrar.png" alt="Boton para borrar el contenido de la tabla">
             </button>
         </div>
         
