@@ -24,7 +24,8 @@ const connection = mysql.createConnection({
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------
 app.post('/login', (req, res) => {
-  const matricula = req.body.matricula;
+  const matricula = req.body.ma
+  tricula;
   const password = req.body.password;
   
 
