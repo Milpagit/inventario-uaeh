@@ -56,9 +56,28 @@ app.post('/edificio', (req, res) => {
   connection.query(sql, [nombre,direccion], (error, results) => {
     if (error) {
       console.error(error);
-      res.send('Error inserting data');
+      const successMessage = 'Datos insertados incorrectamente';
+     // Script JavaScript para mostrar una ventana emergente con el mensaje de éxito y luego redirigir a otra página
+     const successScript = `
+       <script>
+         alert('${successMessage}');
+         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/edificio.html';
+       </script>
+     `;
+     // Enviar la respuesta con el script JavaScript de éxito
+     res.send(successScript);
     } else {
-      res.send('Datos insertados correctamente');
+     // Mensaje de éxito
+     const successMessage = 'Datos insertados correctamente';
+     // Script JavaScript para mostrar una ventana emergente con el mensaje de éxito y luego redirigir a otra página
+     const successScript = `
+       <script>
+         alert('${successMessage}');
+         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/principal.html';
+       </script>
+     `;
+     // Enviar la respuesta con el script JavaScript de éxito
+     res.send(successScript);
     }
   });
 });
@@ -79,7 +98,17 @@ app.post('/salon', (req, res) => {
       console.error(error);
       res.send('Error inserting data');
     } else {
-      res.send('Datos insertados correctamente');
+      // Mensaje de éxito
+     const successMessage = 'Datos insertados correctamente';
+     // Script JavaScript para mostrar una ventana emergente con el mensaje de éxito y luego redirigir a otra página
+     const successScript = `
+       <script>
+         alert('${successMessage}');
+         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/principal.html';
+       </script>
+     `;
+     // Enviar la respuesta con el script JavaScript de éxito
+     res.send(successScript);
     }
   });
 });
@@ -98,7 +127,17 @@ app.post('/usuario', (req, res) => {
       console.error(error);
       res.send('Error inserting data');
     } else {
-      res.send('Datos insertados correctamente');
+      // Mensaje de éxito
+     const successMessage = 'Datos insertados correctamente';
+     // Script JavaScript para mostrar una ventana emergente con el mensaje de éxito y luego redirigir a otra página
+     const successScript = `
+       <script>
+         alert('${successMessage}');
+         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/principal.html';
+       </script>
+     `;
+     // Enviar la respuesta con el script JavaScript de éxito
+     res.send(successScript);
     }
   });
 });
@@ -122,7 +161,17 @@ app.post('/recurso', (req, res) => {
       console.error(error);
       res.send('Error al guardar datos');
     } else {
-      res.send('Datos insertados correctamente');
+      // Mensaje de éxito
+     const successMessage = 'Datos insertados correctamente';
+     // Script JavaScript para mostrar una ventana emergente con el mensaje de éxito y luego redirigir a otra página
+     const successScript = `
+       <script>
+         alert('${successMessage}');
+         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/principal.html';
+       </script>
+     `;
+     // Enviar la respuesta con el script JavaScript de éxito
+     res.send(successScript);
     }
   });
 });                           
@@ -144,7 +193,17 @@ app.post('/movimiento', (req, res) => {
       console.error(error);
       res.send('Error inserting data');
     } else {
-      res.send('Datos insertados correctamente');
+      // Mensaje de éxito
+     const successMessage = 'Datos insertados correctamente';
+     // Script JavaScript para mostrar una ventana emergente con el mensaje de éxito y luego redirigir a otra página
+     const successScript = `
+       <script>
+         alert('${successMessage}');
+         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/principal.html';
+       </script>
+     `;
+     // Enviar la respuesta con el script JavaScript de éxito
+     res.send(successScript);
     }
   });
 });
