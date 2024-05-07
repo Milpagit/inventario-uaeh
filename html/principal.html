@@ -82,8 +82,46 @@
         <br><br>
         <div class="buscar">
             <i class="bi bi-search"></i>
-            <input type="text" placeholder="Buscar" required />
+            <input type="text" id="busqueda" placeholder="Buscar edificio..." oninput="buscarEdificio()">
+
           </div>
+          <br><br> <br><br><br>
+          <h1>Información de Edificios</h1>
+          <!-- Aquí se mostrará la tabla generada por el servidor -->
+          <div id="tabla-edificios"></div>
+        
+          <script>
+            // Función para buscar edificios
+        function buscarEdificio() {
+        // Obtener el valor del campo de búsqueda
+        var textoBusqueda = document.getElementById('busqueda').value.toLowerCase();
+        
+        // Obtener todas las filas de la tabla
+        var filas = document.querySelectorAll('#tabla-edificios table tr');
+        
+        // Iterar sobre las filas y ocultar las que no coinciden con la búsqueda
+        filas.forEach(function(fila) {
+            var contenido = fila.textContent.toLowerCase();
+            if (contenido.includes(textoBusqueda)) {
+            fila.style.display = 'table-row';
+            } else {
+            fila.style.display = 'none';
+            }
+        });
+        }
+
+        // Cargar tabla de edificios al cargar la página
+        window.onload = function() {
+        fetch('http://localhost:3000/edificios')
+            .then(response => response.text())
+            .then(data => {
+            document.getElementById('tabla-edificios').innerHTML = data;
+            })
+            .catch(error => console.error('Error:', error));
+        };
+          </script>
+          <script src="/inventario-uaeh/Js/conexion.js"></script>
+        
     </main>
     <dialog class="modal">
         <button class="botonsitos">

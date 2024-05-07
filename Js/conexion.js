@@ -208,20 +208,41 @@ app.post('/movimiento', (req, res) => {
   });
 });
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-app.post('/getEdificioSuggestions', (req, res) => {
-  const input = req.body.input;
+// Route to fetch and display information about buildings
+app.get('/edificios', (req, res) => {
+  // Prepare SQL query to fetch building information
+  const sql = `SELECT * FROM edificio`;
 
-  // Consultar la base de datos para obtener sugerencias de edificios que coincidan con el texto ingresado
-  const sql = `SELECT nombre FROM edificio WHERE nombre LIKE ?`;
-  const query = `%${input}%`; // Añadir comodines para obtener sugerencias basadas en cualquier parte del nombre
-
-  connection.query(sql, query, (error, results) => {
+  connection.query(sql, (error, results) => {
     if (error) {
-      console.error('Error al buscar sugerencias de edificios:', error);
-      res.status(500).json({ error: 'Error al buscar sugerencias de edificios' });
+      console.error(error);
+      res.status(500).send('Error fetching data from database');
     } else {
-      // Enviar las sugerencias encontradas al cliente
-      res.json(results);
+      // Construct HTML table to display building information
+      let tableHtml = `
+        <h2>Información de Edificios</h2>
+        <table border="1">
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Dirección</th>
+          </tr>`;
+
+      // Loop through each row in the results and add to the table
+      results.forEach((row) => {
+        tableHtml += `
+          <tr>
+            <td>${row.id_edificio}</td>
+            <td>${row.nombre}</td>
+            <td>${row.direccion}</td>
+          </tr>`;
+      });
+
+      // Close the table HTML
+      tableHtml += `</table>`;
+
+      // Send the HTML response
+      res.send(tableHtml);
     }
   });
 });

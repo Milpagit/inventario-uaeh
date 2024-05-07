@@ -347,3 +347,21 @@ main.min-main{
     color: blueviolet;
     left: 40%;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: solid #ddd;
+    border-radius: 200px;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    font-weight: bold;
+    background-color: blueviolet;
+  }
