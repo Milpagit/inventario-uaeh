@@ -1,56 +1,145 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme=""> 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Boostrap 5-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!--Fuentes-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!--Iconos-->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!--Estilo-->
-  <link rel="stylesheet" href="/inventario-uaeh/css/formulario.css">
-  <title>salones</title>
+  <link rel="stylesheet" href="/inventario-uaeh/css/formulario_bos.css">
+  <title>Inventario| Agregar Recurso</title>
 </head>
-<body>
-  <h1>Agregar Recurso</h1>
-  <p>Ingrese todos los datos por favor</p>
-  <form action="http://localhost:3000/recurso" method="post">
-    <div>
-      <p>A que salon pertenece</p>
-      <input type="text" name="NS2" id="NS2">
+<body data-bs-theme="light">
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-toggler">
+          <a class="navbar-brand" href="#">
+            <i class="bi bi-folder-fill"></i>
+          </a>
+          <ul class="navbar-nav d-flex justify-content-center align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active A" aria-current="page" href="principal.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#contacto">Reporte</a>
+            </li>
+            <li class="nav-item">
+              <button type="button agregar" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Agregar
+              </button>
+            </li>
+            <a class="navbar-brand salir" href="invex.html">
+              <i class="bi bi-escape"></i>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Que desea agregar</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body ">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary"><a href="edificio.html">Edificios</a></button>
+          <button type="button" class="btn btn-primary"><a href="salon.html">Salon</a></button>
+          <button type="button" class="btn btn-primary"><a href="movimiento.html">Movimiento</a></button>
+          <button type="button" class="btn btn-primary"><a href="usuario.html">Usuario</a></button>
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
     </div>
-    <div>
-      <p>Nombre del recurso</p>
-      <input type="text" name="NR" id="NR">
+  </div>
+</div>
+<div class="Tutulo container ">
+  <div class="row">
+    <div class="col order-last col-5 Icono_del_titulo">
+      <i class="log bi bi-box2-fill"></i>
     </div>
-    <div>
-        <p>Color</p>
-        <input type="text" name="CR" id="CR">
+    <div class="col order-first col-7 titulo">
+      <h1>Agregar <br>Recurso </h1>
     </div>
-    <div>
-        <p>Marca</p>
-        <input type="text" name="MR" id="MR">
-    </div>
-    <div>
-        <p>Estado</p>
-        <input type="text" name="ER" id="ER">
-    </div>
-    <div>
-        <p>Precio</p>
-        <input type="number" name="PR" id="PR">
-    </div>
-    <div>
-        <p>Serial</p>
-        <input type="text" name="SR" id="SR">
-    </div>
-    <div>
-        <p>Posicion</p>
-        <input type="number" name="POR" id="POR">
-    </div>
-    <input type="submit" value="Enviar">
-  </form>
+  </div>
+</div>
+    
+  <div class="container text-center formulario">
+    <form action="http://localhost:3000/recurso" method="post">
+      <div class="pregunta">
+        <p>Salon que pertenece</p> 
+        <input class="form-control" type="text" name="NS2" id="NS2" placeholder="Ingrese el salon en donde se encuentra el recurso">
+        
+      </div>
+      <div class="pregunta">
+        <p>Nombre del recurso</p>
+        <input class="form-control" type="text" name="NR" id="NR" placeholder="Ingresa el nombre del recurso" >
+      </div>
+      <div class="pregunta">
+          <p>Seleccione el color del recurso</p>
+          <!--<input class="form-control" type="" name="CR" id="CR" >-->
+          <select class="form-select" aria-label="Default select example" name="CR" id="CR" >
+            <option selected>Color</option>
+            <option value="Rojo">Rojo</option>
+            <option value="rosa">Rosa</option>
+            <option value="Amarillo">Amarillo</option>
+            <option value="Azul">Azul</option>
+            <option value="Cafe">Cafe</option>
+            <option value="Blanco">Blanco</option>
+            <option value="Negro">Negro</option>
+            <option value="Gris">Gris</option>
+          </select>
+      </div>
+      <div class="pregunta">
+          <p>Cual es la Marca del recurso</p>
+          <!--<p class="aclaracion">En caso de no saber su marca guardala como generico</p>-->
+          <input class="form-control" type="text" name="MR" id="MR" placeholder="En caso de no saber su marca guardala como generico" >
+      </div>
+      
+      <div class="pregunta">
+          <p>Estado se encuenta el recurso</p>
+          <select class="form-select" aria-label="Default select example" name="ER" id="ER" >
+            <option selected>Estado</option>
+            <option value="Rojo">Exelenmte</option>
+            <option value="rosa">Regular</option>
+            <option value="Amarillo">Malo</option>
+          </select>
+      </div>
+  
+      <div class="pregunta">
+          <p>Precio estimado del recurso</p>
+          <input class="form-control" min="1" step="1" type="number"  name="PR" id="PR" placeholder="Ingrese la cantidad en pesos Mexicanos">
+      </div>
+  
+      <div class="pregunta">
+          <p> Ingrese el Serial</p>
+          <input class="form-control" type="text" name="SR" id="SR" placeholder="Serial" >
+      </div>
+      <div class="pregunta">
+          <p>Posicion</p>
+          <!--<p class="aclaracion">En caso de no tener posicion guardarlo como 0 </p>-->
+          <input class="form-control" type="text" name="POR" id="POR" placeholder="En caso de no tener posicion guardarlo como 0">
+      </div class="pregunta">
+      <br>
+      <input class="btn btn-secondary btn-lg"  type="submit" value="Enviar">
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="/inventario-uaeh/Js/principal.js"></script>
 </body>
 </html>

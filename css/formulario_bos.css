@@ -1,0 +1,87 @@
+:root{
+    --color-barra-lateral: #E6E6FA;
+    --fondo-formulario:#E6E6FA;
+    --letras-boton:rgb(255,255,255);
+    --titulo-modal:#E6E6FA;
+    --cuerpo-modal:rgb(255,255,255);
+    --fondo:rgb(255,255,255);
+    --letra:rgb(0,0,0);
+    
+}
+.dark-mode{
+  --color-barra-lateral: rgb(134,60,178);
+  --fondo-formulario:rgb(134,60,178);
+  --letras-boton:rgb(255,255,255);
+  --titulo-modal:#A970FF;
+  --cuerpo-modal:rgb(255,255,255);
+  --fondo:rgb(0,0,0);
+  --letra:rgb(255,255,255);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    background-color: var();
+  }
+  .navbar{
+    padding: 1rem;
+    background-color: var(--color-barra-lateral);
+    color: white;
+  }
+
+
+
+ .navbar-collapse{
+  align-items: center;
+ }
+.salir{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Adjust as needed for vertical centering */
+    right: 10px; /* Adjust for horizontal spacing */
+}
+
+  @media screen and (max-width: 767px) {
+    .navbar-brand {
+      display: none;
+    }
+  }
+
+p{
+  font-size: 130%;
+}
+
+.formulario{
+  background-color: var(--fondo-formulario);
+  border-radius: 20px;
+}
+h1 {
+  font-size: 60px;
+  margin-left: 0;
+}
+.titulo{
+  display: flex;
+  justify-content: flex-end;
+}
+.Icono_del_titulo{
+  font-size: 120px;
+}
+.btn-group a{
+  color: white;
+  text-decoration: none;
+}
+.modal-header{
+  background-color: var(--titulo-modal);
+}
+.container-fluid a, .nav-item a{
+  color:var(--letra)  ;
+}
+.pregunta{
+  margin: 10px;
+}
+.btn-secondary{
+  margin: 15px;
+}
+

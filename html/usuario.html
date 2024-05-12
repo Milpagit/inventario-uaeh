@@ -1,40 +1,118 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme=""> 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Boostrap 5-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!--Fuentes-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!--Iconos-->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!--Estilo-->
-  <link rel="stylesheet" href="/inventario-uaeh/css/formulario.css">
-  <title>salones</title>
+  <link rel="stylesheet" href="/inventario-uaeh/css/formulario_bos.css">
+  <title>Inventario| Agregar Usuario</title>
 </head>
-<body>
-  <h1>Agregar usuario</h1>
-  <p>Ingrese todos los datos por favor</p>
-  <form action="http://localhost:3000/usuario" method="post">
-    <div>
-      <p>Nombre completo</p>
-      <input type="text" name="NOMC" id="NOMC">
+<body data-bs-theme="light">
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-toggler">
+          <a class="navbar-brand" href="#">
+            <i class="bi bi-folder-fill"></i>
+          </a>
+          <ul class="navbar-nav d-flex justify-content-center align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active A" aria-current="page" href="principal.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#contacto">Reporte</a>
+            </li>
+            <li class="nav-item">
+              <button type="button agregar" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Agregar
+              </button>
+            </li>
+            <a class="navbar-brand salir" href="invex.html">
+              <i class="bi bi-escape"></i>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Que desea agregar</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body ">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary"><a href="edificio.html">Edificios</a></button>
+          <button type="button" class="btn btn-primary"><a href="salon.html">Salon</a></button>
+          <button type="button" class="btn btn-primary"><a href="movimiento.html">Movimiento</a></button>
+          <button type="button" class="btn btn-primary"><a href="recurso.html">Recurso</a></button>
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
     </div>
-    <div>
-      <p>Nivel de usuario</p>
-      <input type="text" name="NUSU" id="NUSU">
+  </div>
+</div>
+<div class="Tutulo container ">
+  <div class="row">
+    <div class="col order-last col-5 Icono_del_titulo">
+      <i class="bi bi-person-fill"></i>
     </div>
-    <div>
-        <p>contraseña</p>
-        <input type="text" name="CUSU" id="CUSU">
+    <div class="col order-first col-7 titulo">
+      <h1>Agregar <br>Usuario </h1>
     </div>
-    <div>
-        <p>matricula</p>
-        <input type="text" name="MUSU" id="MUSU">
-    </div>
-    <input type="submit" value="Enviar">
-  </form>
+  </div>
+</div>
+    
+  <div class="container text-center formulario">
+    <form action="http://localhost:3000/recurso" method="post">
+      <div class="pregunta">
+        <p>Nombre Completo</p> 
+        <input class="form-control" type="text" name="NOMC" id="NOMC" placeholder="Ingrese su Nombre con apellidos Porfavor">
+        
+      </div>
+      <div class="Nivel de usuario">
+          <p>Seleccione el color del recurso</p>
+          <!--<input class="form-control" type="" name="CR" id="CR" >-->
+          <select class="form-select" aria-label="Default select example" name="NUSU" id="NUSU" >
+            <option selected>Nivel</option>
+            <option value="Rojo">Administrador</option>
+            <option value="rosa">Editor</option>
+            <option value="Amarillo">Capturista</option>
+          </select>
+      </div>
+      <div class="pregunta">
+          <p>Ingrese su contraseña</p>
+          <!--<p class="aclaracion">En caso de no saber su marca guardala como generico</p>-->
+          <input class="form-control" type="password" name="CUSU" id="CUSU" placeholder=" Mayor a 8 digitos sin emojis ni carateres especiales" >
+      </div>
+      
+  
+      <div class="pregunta">
+          <p>Matricula</p>
+          <input class="form-control" type="number"  name="MUSU" id="MUSU" placeholder="Ingrese la matricula con la que entra al sistema">
+      </div>
+  
+      <br>
+      <input class="btn btn-secondary btn-lg"  type="submit" value="Enviar">
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="/inventario-uaeh/Js/principal.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 :root{
-    --color-barra-lateral:rgb(222, 226, 230);
+    --color-barra-lateral:#E6E6FA;
     --color-texto:rgb(0,0,0);
     --color-texto-menu:rgb(134,136,144);
     --color-boton:rgb(0,0,0);
@@ -13,17 +13,17 @@
     --color-fondo-flotante:rgb(233,236,239);
 }
  .dark-mode{
-    --color-barra-lateral:rgb(13,27,42);
+    --color-barra-lateral:rgb(134,60,178);
     --color-texto:rgb(255,255,255);
-    --color-texto-menu:rgb(110,110,117);
+    --color-texto-menu:rgb(255, 255, 255);
     --color-boton:rgb(255,255,255);
     --color-texto-boton:rgb(0,0,0);
     --color-menu-hover:rgb(0,0,0);
     --color-menu-hover-texto:rgb(238,238,238);
-    --color-Linea:rgb(71,70,78);
+    --color-Linea:rgb(33,37,41);
     --color-palanca-base:rgb(39,205,64);
     --color-palanca-circulo:rgb(255,255,255);
-    --color-fondo:rgb(27,38,59);
+    --color-fondo:rgb(33,37,41);
     --color-fondo-flotante:rgb(37,48,69);
 }
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Información de Edificios</title>
+</head>
+<body>
+  <h1>Información de Edificios</h1>
+
+  <!-- Campo de búsqueda -->
+  <input type="text" id="busqueda" placeholder="Buscar edificio..." oninput="buscarEdificio()">
+
+  <!-- Tabla de edificios -->
+  <div id="tabla-edificios"></div>
+
+  <script>
+    // Función para buscar edificios
+    function buscarEdificio() {
+      // Obtener el valor del campo de búsqueda
+      var textoBusqueda = document.getElementById('busqueda').value.toLowerCase();
+      
+      // Obtener todas las filas de la tabla
+      var filas = document.querySelectorAll('#tabla-edificios table tr');
+      
+      // Iterar sobre las filas y ocultar las que no coinciden con la búsqueda
+      filas.forEach(function(fila) {
+        var contenido = fila.textContent.toLowerCase();
+        if (contenido.includes(textoBusqueda)) {
+          fila.style.display = 'table-row';
+        } else {
+          fila.style.display = 'none';
+        }
+      });
+    }
+
+    // Cargar tabla de edificios al cargar la página
+    window.onload = function() {
+      fetch('http://localhost:3000/edificios')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('tabla-edificios').innerHTML = data;
+        })
+        .catch(error => console.error('Error:', error));
+    };
+  </script>
+</body>
+</html>

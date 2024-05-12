@@ -14,6 +14,7 @@ console.log(modoOscuroActivado);
 if (modoOscuroActivado) {
   console.log("poniendo modo oscuro");
   document.body.classList.add("dark-mode");
+  document.querySelector("body").setAttribute("data-bs-theme","dark")
 }
 
 /* palanca.addEventListener("click", () => {

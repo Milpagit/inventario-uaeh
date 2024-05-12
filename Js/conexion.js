@@ -73,7 +73,7 @@ app.post('/edificio', (req, res) => {
      const successScript = `
        <script>
          alert('${successMessage}');
-         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/principal.html';
+         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/edificio.html';
        </script>
      `;
      // Enviar la respuesta con el script JavaScript de éxito
@@ -96,7 +96,16 @@ app.post('/salon', (req, res) => {
   connection.query(sql, [nombre_edificio,nombre,capacidad,planta,ubicacion], (error, results) => {
     if (error) {
       console.error(error);
-      res.send('Error inserting data');
+      const successMessage = 'Datos insertados incorrectamente';
+     // Script JavaScript para mostrar una ventana emergente con el mensaje de éxito y luego redirigir a otra página
+     const successScript = `
+       <script>
+         alert('${successMessage}');
+         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/salon.html';
+       </script>
+     `;
+     // Enviar la respuesta con el script JavaScript de éxito
+     res.send(successScript);
     } else {
       // Mensaje de éxito
      const successMessage = 'Datos insertados correctamente';
@@ -104,7 +113,7 @@ app.post('/salon', (req, res) => {
      const successScript = `
        <script>
          alert('${successMessage}');
-         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/principal.html';
+         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/salon.html';
        </script>
      `;
      // Enviar la respuesta con el script JavaScript de éxito
@@ -125,7 +134,16 @@ app.post('/usuario', (req, res) => {
   connection.query(sql, [nombre_completo_,nivel_de_usuario,contrasenia,matricula], (error, results) => {
     if (error) {
       console.error(error);
-      res.send('Error inserting data');
+      const successMessage = 'Datos insertados incorrectamente';
+     // Script JavaScript para mostrar una ventana emergente con el mensaje de éxito y luego redirigir a otra página
+     const successScript = `
+       <script>
+         alert('${successMessage}');
+         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/usuario.html';
+       </script>
+     `;
+     // Enviar la respuesta con el script JavaScript de éxito
+     res.send(successScript);
     } else {
       // Mensaje de éxito
      const successMessage = 'Datos insertados correctamente';
@@ -133,7 +151,7 @@ app.post('/usuario', (req, res) => {
      const successScript = `
        <script>
          alert('${successMessage}');
-         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/principal.html';
+         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/invex.html';
        </script>
      `;
      // Enviar la respuesta con el script JavaScript de éxito
@@ -159,7 +177,16 @@ app.post('/recurso', (req, res) => {
   connection.query(sql, [ nombre_salon2,nombre,color,marca,estado,precio,serial,posicion], (error, results) => {
     if (error) {
       console.error(error);
-      res.send('Error al guardar datos');
+      const successMessage = 'Datos insertados incorrectamente';
+     // Script JavaScript para mostrar una ventana emergente con el mensaje de éxito y luego redirigir a otra página
+     const successScript = `
+       <script>
+         alert('${successMessage}');
+         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/recurso.html';
+       </script>
+     `;
+     // Enviar la respuesta con el script JavaScript de éxito
+     res.send(successScript);
     } else {
       // Mensaje de éxito
      const successMessage = 'Datos insertados correctamente';
@@ -167,7 +194,7 @@ app.post('/recurso', (req, res) => {
      const successScript = `
        <script>
          alert('${successMessage}');
-         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/principal.html';
+         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/recurso.html';
        </script>
      `;
      // Enviar la respuesta con el script JavaScript de éxito
@@ -191,7 +218,16 @@ app.post('/movimiento', (req, res) => {
   connection.query(sql, [serial,matricula,nombre_salon,tipo_de_movimiento,fecha_de_movimiento,hora_de_movimiento,observaciones], (error, results) => {
     if (error) {
       console.error(error);
-      res.send('Error inserting data');
+      const successMessage = 'Datos insertados incorrectamente';
+     // Script JavaScript para mostrar una ventana emergente con el mensaje de éxito y luego redirigir a otra página
+     const successScript = `
+       <script>
+         alert('${successMessage}');
+         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/movimiento.html';
+       </script>
+     `;
+     // Enviar la respuesta con el script JavaScript de éxito
+     res.send(successScript);
     } else {
       // Mensaje de éxito
      const successMessage = 'Datos insertados correctamente';
@@ -199,7 +235,7 @@ app.post('/movimiento', (req, res) => {
      const successScript = `
        <script>
          alert('${successMessage}');
-         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/principal.html';
+         window.location.href = 'http://127.0.0.1:5500/inventario-uaeh/html/movimiento.html';
        </script>
      `;
      // Enviar la respuesta con el script JavaScript de éxito
@@ -220,7 +256,6 @@ app.get('/edificios', (req, res) => {
     } else {
       // Construct HTML table to display building information
       let tableHtml = `
-        <h2>Información de Edificios</h2>
         <table border="1">
           <tr>
             <th>ID</th>
@@ -247,7 +282,7 @@ app.get('/edificios', (req, res) => {
   });
 });
 
-
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // inicie el servidor
 app.listen(port, () => {
   console.log(`Host jalando al 100 en el puerto ${port}`);
